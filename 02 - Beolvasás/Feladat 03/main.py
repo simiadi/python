@@ -1,7 +1,9 @@
 from os import system
 
-nev: str = str(input("Adja meg a nevét: "))
-magassag: float = float(input("Adja meg a magasságát (méterben): "))
+print("Adja meg a nevét: ", end="")
+nev: str = str(input())
+print("Adja meg a magasságát (méterben): ", end="")
+magassag: float = float(input())
 
 system("cls")
 

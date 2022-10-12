@@ -1,9 +1,13 @@
 from os import system
 
-megjelenesiev: int = int(input("Adja meg a kedvenc filmének a megjelenési évét: "))
-rendezonev: str = str(input("Adja meg a rendező nevét: "))
-filmcim: str = str(input("Adja meg a film címét: "))
-foszereplonev: str = str(input("Adja meg a főszereplő nevét: "))
+print("Adja meg a kedvenc filmének a megjelenési évét: ", end="")
+megjelenesiev: int = int(input())
+print("Adja meg a rendező nevét: ", end="")
+rendezonev: str = str(input())
+print("Adja meg a film címét: ", end="")
+filmcim: str = str(input())
+print("Adja meg a főszereplő nevét: ", end="")
+foszereplonev: str = str(input())
 
 system("cls")
 

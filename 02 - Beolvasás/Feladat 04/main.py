@@ -1,7 +1,9 @@
 from os import system
 
-nev: str = str(input("Adja meg a nevét: "))
-billentyu: str = str(input("Adjon meg egy billentyűt: "))
+print("Adja meg a nevét: ", end="")
+nev: str = str(input())
+print("Adjon meg egy billentyűt: ", end="")
+billentyu: str = str(input())
 
 system("cls")
 

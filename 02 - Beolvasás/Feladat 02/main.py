@@ -1,7 +1,9 @@
 from os import system
 
-nev: str = str(input("Adja meg a nevét: "))
-szuletesiev: int = int(input("Adja meg a születési évét: "))
+print("Adja meg a nevét: ", end="")
+nev: str = str(input())
+print("Adja meg a születési évét: ", end="")
+szuletesiev: int = int(input())
 
 system("cls")
 

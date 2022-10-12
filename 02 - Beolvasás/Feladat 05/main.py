@@ -1,8 +1,11 @@
 from os import system
 
-egyuttes: str = str(input("Adja meg a kedvenc együttesének a nevét: "))
-szam: str = str(input("Adja meg a legjobb zeneszámát: "))
-szamhossz: float = float(input("Adja meg a zeneszám hosszát (percben): "))
+print("Adja meg a kedvenc együttesének a nevét: ", end="")
+egyuttes: str = str(input())
+print("Adja meg a legjobb zeneszámát: ", end="")
+szam: str = str(input())
+print("Adja meg a zeneszám hosszát (percben): ", end="")
+szamhossz: float = float(input())
 
 system("cls")
 
