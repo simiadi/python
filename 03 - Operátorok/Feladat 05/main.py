@@ -1,14 +1,20 @@
 from os import system
 
+a: float = None
+b: float = None
+c: float = None
+d: float = None
+eredmeny: float = None
+
 print("Adja meg az a értékét: ", end="")
-a: float = float(input())
+a = float(input())
 print("Adja meg a b értékét: ", end="")
-b: float = float(input())
+b = float(input())
 print("Adja meg a c értékét: ", end="")
-c: float = float(input())
+c = float(input())
 print("Adja meg a d értékét: ", end="")
-d: float = float(input())
-eredmeny: float = (a + b) / (c - d)
+d = float(input())
+eredmeny = (a + b) / (c - d)
 
 system("cls")
 

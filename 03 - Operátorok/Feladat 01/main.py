@@ -1,9 +1,13 @@
 from os import system
+from typing import Type
+
+a: float = None
+b: float = None
 
 print("Adja meg az a értékét: ", end="")
-a: float = float(input())
+a = float(input())
 print("Adja meg a b értékét: ", end="")
-b: float = float(input())
+b = float(input())
 eredmeny: float = a + b
 
 system("cls")
