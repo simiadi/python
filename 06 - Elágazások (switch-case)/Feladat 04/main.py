@@ -33,4 +33,4 @@ match muvelet:
         eredmeny4 = szam1 / szam2
         print(f"Eredmény: {eredmeny4}", end="")
     case _:
-        print("Nincs ilyen művelet", end="")
+        print("Nincs ilyen művelet!", end="")

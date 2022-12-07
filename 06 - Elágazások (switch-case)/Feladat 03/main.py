@@ -19,4 +19,4 @@ match udito:
     case 4:
         print("Sikeres vásárlás! (Sprite)", end="")
     case _:
-        print("Nincs ilyen üdítő", end="")
+        print("Nincs ilyen üdítő!", end="")

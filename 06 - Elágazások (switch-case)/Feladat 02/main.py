@@ -23,4 +23,4 @@ match nap:
     case "Vasárnap":
         print("A hét 7. napja van ma", end="")
     case _:
-        print("Nincs ilyen nap a héten", end="")
+        print("Nincs ilyen nap a héten!", end="")
