@@ -1,22 +1,23 @@
 number: int = None
-greaterNumber: int = None
 temp: str = None
 isNumber: bool = False
 truncateString: str = None
 
-print("Adjon meg egy számot: ", end="")
-temp = input()
-truncateString = temp.replace(".", "").replace("-", "")
-isNumber = truncateString.isnumeric()
-
-while (number == None or (number < 0 or number > 9)):
+while (number == None or number > 999 or number < 100):
     print("Adjon meg egy számot: ", end="")
     temp = input()
     truncateString = temp.replace(".", "").replace("-", "")
     isNumber = truncateString.isnumeric()
 
     if(isNumber):
-        number = float(temp)
-        print(f"Számot adott meg: {number}")
+        number = int(temp)
+        if number > 999 or number < 100:
+            print("A megadott szám nem háromjegyű!")
     else:
         print("Nem számot adott meg!")
+
+if number % 7 == 0:
+    print("A megadott szám osztható 7-tel!")
+else:
+    print("A megadott szám nem osztható 7-tel!")
+    
