@@ -1,29 +1,12 @@
-a: int = None
-b: int = None
+from console import *
+from mathFunctions import *
 
-while True:
-    try:
-        print("Adjon meg egy egész számot: ", end="")
-        a = int(input())
-        break
-    except:
-        print("That's not a valid option!")
+x: float = None
+y: float = None
+result: float = None
 
-print("Adjon meg egy egész számot: ", end="")
-a = input()
+x = getNumberFromConsole()
+y = getNumberFromConsole()
 
-print("Adjon meg mégegy egész számot: ", end="")
-b = input()
-
-def osszeadas(a: int, b: int) -> int:
-    eredmeny: int = a + b
-    return eredmeny
-def kivonas(a: int, b: int) -> int:
-    eredmeny: int = a - b
-    return eredmeny
-def szorzas(a: int, b: int) -> int:
-    eredmeny: int = a * b
-    return eredmeny
-def osztas(a: int, b: int) -> int:
-    eredmeny: int = a / b
-    return eredmeny
+result = sumOfTwoNumbers(x, y)
+printToConsole(x, y, result, "+")
