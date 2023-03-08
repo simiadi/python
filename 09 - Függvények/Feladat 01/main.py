@@ -4,9 +4,9 @@ from mathFunctions import *
 x: float = None
 y: float = None
 sumresult: float = None
-kivonasresult: float = None
-szorzasresult: float = None
-osztasresult: float = None
+extractionresult: float = None
+multiplyresult: float = None
+divisionresult: float = None
 
 x = getNumberFromConsole()
 y = getNumberFromConsole()
@@ -14,11 +14,11 @@ y = getNumberFromConsole()
 sumresult = sumOfTwoNumbers(x, y)
 printToConsole(x, y, sumresult, "+")
 
-kivonasresult = sumOfTwoNumbers(x, y)
-printToConsole(x, y, kivonasresult, "-")
+extractionresult = extractionOfTwoNumbers(x, y)
+printToConsole(x, y, extractionresult, "-")
 
-szorzasresult = sumOfTwoNumbers(x, y)
-printToConsole(x, y, szorzasresult, "*")
+multiplicationresult = multiplicationOfTwoNumbers(x, y)
+printToConsole(x, y, multiplicationresult, "*")
 
-osztasresult = sumOfTwoNumbers(x, y)
-printToConsole(x, y, osztasresult, "/")
+divisionresult = divisionOfTwoNumbers(x, y)
+printToConsole(x, y, divisionresult, "/")

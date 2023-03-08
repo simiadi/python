@@ -3,17 +3,17 @@ def sumOfTwoNumbers(a: float, b: float) -> float:
     result = a + b
     return result
 
-def kivonas(a: float, b: float) -> float:
+def extractionOfTwoNumbers(a: float, b: float) -> float:
     result: float = None
     result = a - b
     return result
 
-def szorzas(a: float, b: float) -> float:
+def multiplicationOfTwoNumbers(a: float, b: float) -> float:
     result: float = None
     result = a * b
     return result
 
-def osztas(a: float, b: float) -> float:
+def divisionOfTwoNumbers(a: float, b: float) -> float:
     result: float = None
     result = a / b
     return result
