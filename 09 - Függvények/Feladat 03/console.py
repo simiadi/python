@@ -7,14 +7,24 @@ def getNameFromConsole() -> str:
 
     return name
 
-def getAgeFromConsole() -> int:
-    age: int = None
+def getAgeFromConsole() -> float:
+    number: float = None
+    temp: str = None
+    isNumber: bool = False
+    truncateString: str = None
 
-    while (age == None):
+    while (number == None):
         print("Adja meg az életkorát: ", end="")
-        age = input()
+        temp = input()
+        truncateString = temp.replace(".", "").replace("-", "")
+        isNumber = truncateString.isnumeric()
 
-    return age
+        if(isNumber):
+            number = float(temp)
+        else:
+            print("Nem számot adott meg!")
+
+    return number
 
 def printToConsole(name: str, age: int) -> None:
     print(f"{name} ön {age} éves!")

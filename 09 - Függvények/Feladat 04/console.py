@@ -1,3 +1,5 @@
+from sty import fg, Style, RgbFg
+
 def getNameFromConsole() -> str:
     name: str = None
 
@@ -11,4 +13,5 @@ def getNameFromConsole() -> str:
     return name.title().strip()
 
 def printWelcomeMessage(name: str) -> None:
-    print(f"Üdvözöljük {name}!")
+    fg.color = Style(RgbFg(len(name), len(name), len(name)))
+    print(fg.color + f"Üdvözöljük {name}!")
