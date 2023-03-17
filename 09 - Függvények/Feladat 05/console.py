@@ -7,16 +7,5 @@ def getWordFromConsole() -> str:
 
     return word
 
-def getSameLetters(n1: str, n2: str) -> int:
-    n1: str = None
-    n2: str = None
-    count: int = 0
-
-    for i in range(min(len(n1), len(n2))):
-        if n1[i] == n2[i]:
-            count += 1
-
-    return count
-
-def printToConsole(result: float) -> None:
+def printToConsole(result: str) -> None:
     print(f"Ennyi karakterük egyezik meg: {result}")
