@@ -22,12 +22,12 @@ def getUnitFromConsole() -> str:
 
     while (unit == None):
         print("Adja meg a mértékegység nevét (F vagy K): ", end="")
-        unit = input()
+        unit = input().upper()
 
         if(unit not in ["F", "K"]):
             print("Nem megfelelő mértékegység!")
 
-    return unit.upper()
+    return unit
 
 def printToConsole(result: str, value: float, unit: str) -> None:
     print(f"{value} Celsius = {result} {unit}")
