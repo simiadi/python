@@ -29,5 +29,5 @@ def getCurrencyFromConsole() -> str:
 
     return currency
 
-def printToConsole(result: float) -> None:
-    print(f"{result}")
+def printToConsole(result: float, result2: float, currency: str) -> None:
+    print(f"{currency} érték: {result} EUR érték: {result2}")

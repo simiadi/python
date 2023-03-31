@@ -2,6 +2,7 @@ from forex_python.converter import CurrencyRates
 
 c = CurrencyRates()
 
+eur: float = c.get_rate('EUR', 'HUF')
 huf: float = c.get_rate('HUF', 'EUR')
 jpy: float = 0.75
 usd: float = 0.8
@@ -11,10 +12,12 @@ def convertCurrency(value: float, currency: str) -> float:
     result: float = None
 
     if(currency == "JPY"):
-        result = (value * huf) * jpy
+        result = (value / eur) * jpy
     elif(currency == "USD"):
-        result = (value * huf) * usd
+        result = (value / eur) * usd
+    elif(currency == "CHF"):
+        result = (value / eur) * chf
     else:
-        result = (value * huf) * chf
+        result = (value / eur)
 
     return result
