@@ -10,9 +10,12 @@ def getNumberInRangeFromConsole(start, end) -> float:
         truncateString = temp.replace(".", "").replace("-", "")
         isNumber = truncateString.isnumeric()
 
-        if(isNumber and temp in range(start, end)):
+        if(isNumber):
             number = float(temp)
-        elif(temp not in range(start, end)):
+
+        if(isNumber and number in range(start, end)):
+            print(f"A megadott szám: {number}!")
+        elif(number not in range(start, end)):
             print(f"A megadott szám nem {start} és {end} között van!")
         else:
             print("Nem számot adott meg!")
@@ -24,26 +27,29 @@ def guessRandomNumber(start, end, rndNumber) -> float:
     temp: str = None
     isNumber: bool = False
     truncateString: str = None
-    count: int = None
+    count: int = 0
 
-    while (number is not rndNumber):
+    while (number != rndNumber):
         print(f"Találja ki a {start} és {end} közötti random generált számot: ", end="")
         temp = input()
         truncateString = temp.replace(".", "").replace("-", "")
         isNumber = truncateString.isnumeric()
         count += 1
 
-        if(isNumber and temp == rndNumber):
+        if(isNumber):
             number = float(temp)
-        elif(isNumber and temp > rndNumber):
+
+        if(isNumber and number == rndNumber):
+            print(f"Sikeresen kitaláltad a random generált számot!")
+        elif(isNumber and number > rndNumber):
             print(f"Nem talált, próbálja újra! A beírt szám nagyobb mint a random generált!")
-        elif(isNumber and temp < rndNumber):
+        elif(isNumber and number < rndNumber):
             print(f"Nem talált, próbálja újra! A beírt szám kisebb mint a random generált!")
         else:
             print("Nem számot adott meg!")
 
-    return [number, count]
+    return count
 
 
-def printToConsole(result: float) -> None:
-    print(f"{result}")
+def printToConsole(count: int) -> None:
+    print(f"{count} próbálkozásból találtad ki a random generált számot!")
