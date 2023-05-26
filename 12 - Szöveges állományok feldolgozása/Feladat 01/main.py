@@ -23,10 +23,16 @@ bestStudent: Student = getBestStudent(students)
 print(f"A legjobb tanulo: {bestStudent}")
 
 #5 - atlagfelett.txt allományba keressük ki azon tanulókat kiknek pontjai meghaladják az átlagot!
-aboveAverage: List[Student] = studentAboveAverage(students, classAverage)
+aboveAverage: List[Student] = studentAboveAverage(students, classAvarage)
 writeStudentsInFile(aboveAverage, "atlagfelett.txt")
 
 #6 - Van e kitünő tanulónk?
+
+exists: bool = isAnyExcellent(students)
+if(exists):
+    print("/n Van kitűnő tanuló")
+else:
+    print("/n Nincs kitűnő tanuló")
 
 """
 7 - Hány elégtelen, elégséges, jó, jeles és kitünő tanuló van az osztályban?
